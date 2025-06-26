@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "yGLWbOG9CAQ=",
+  "dgSpecHash": "9rZtWc+IqhE=",
   "success": true,
   "projectFilePath": "C:\\Users\\David Rodrigues\\source\\ClienteApi\\ClienteApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\David Rodrigues\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
     "C:\\Users\\David Rodrigues\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.17\\microsoft.aspnetcore.openapi.8.0.17.nupkg.sha512",
     "C:\\Users\\David Rodrigues\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.6\\microsoft.entityframeworkcore.9.0.6.nupkg.sha512",
     "C:\\Users\\David Rodrigues\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.6\\microsoft.entityframeworkcore.abstractions.9.0.6.nupkg.sha512",
