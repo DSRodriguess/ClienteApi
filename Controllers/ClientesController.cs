@@ -40,6 +40,11 @@ namespace ClienteApi.Controllers
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateClienteDto dto)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState); 
+            }
+
             var cliente = _mapper.Map<Cliente>(dto);
             await _repository.AddAsync(cliente);
 
