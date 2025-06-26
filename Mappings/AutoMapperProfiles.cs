@@ -9,6 +9,8 @@ namespace ClienteApi.Mappings
         public AutoMapperProfiles()
         {
             CreateMap<Cliente, ClienteDto>();
+            CreateMap<Endereco, EnderecoDto>();
+            
             CreateMap<CreateClienteDto, Cliente>()
                 .ForMember(dest => dest.Endereco, opt => opt.MapFrom(src => src.Endereco));
             CreateMap<UpdateClienteDto, Cliente>()

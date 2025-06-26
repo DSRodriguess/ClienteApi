@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using ClienteApi.Domain;
 
 namespace ClienteApi.Infrastructure
 {

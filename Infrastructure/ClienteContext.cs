@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using ClienteApi.Domain;
 
 namespace ClienteApi.Infrastructure
 {

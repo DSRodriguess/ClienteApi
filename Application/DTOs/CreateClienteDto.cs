@@ -1,3 +1,5 @@
+using ClienteApi.Domain;
+
 namespace ClienteApi.Application.DTOs
 {
     public class CreateClienteDto
