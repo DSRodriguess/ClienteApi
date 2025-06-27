@@ -7,7 +7,6 @@ C:\Users\David Rodrigues\source\ClienteApi\obj\Debug\net8.0\ClienteApi.MvcApplic
 C:\Users\David Rodrigues\source\ClienteApi\obj\Debug\net8.0\ClienteApi.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\David Rodrigues\source\ClienteApi\obj\Debug\net8.0\ClienteApi.sourcelink.json
 C:\Users\David Rodrigues\source\ClienteApi\bin\Debug\net8.0\appsettings.Development.json
-C:\Users\David Rodrigues\source\ClienteApi\bin\Debug\net8.0\appsettings.json
 C:\Users\David Rodrigues\source\ClienteApi\bin\Debug\net8.0\ClienteApi.exe
 C:\Users\David Rodrigues\source\ClienteApi\bin\Debug\net8.0\ClienteApi.deps.json
 C:\Users\David Rodrigues\source\ClienteApi\bin\Debug\net8.0\ClienteApi.runtimeconfig.json

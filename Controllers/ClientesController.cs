@@ -3,6 +3,8 @@ using ClienteApi.Application.DTOs;
 using ClienteApi.Domain;
 using AutoMapper;
 using System.Net;
+using Microsoft.Extensions.Logging;
+
 
 namespace ClienteApi.Controllers
 {
@@ -12,16 +14,21 @@ namespace ClienteApi.Controllers
     {
         private readonly IClienteRepository _repository;
         private readonly IMapper _mapper;
+        private readonly ILogger<ClientesController> _logger;
 
-        public ClientesController(IClienteRepository repository, IMapper mapper)
+
+        public ClientesController(IClienteRepository repository, IMapper mapper, ILogger<ClientesController> logger)
         {
             _repository = repository;
             _mapper = mapper;
+            _logger = logger;
+
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
+            _logger.LogInformation("Buscando todos os clientes...");
             var clientes = await _repository.GetAllAsync();
             var dtos = _mapper.Map<IEnumerable<ClienteDto>>(clientes);
             return Ok(dtos);
@@ -42,11 +49,15 @@ namespace ClienteApi.Controllers
         {
             if (!ModelState.IsValid)
             {
+                _logger.LogWarning("Dados inválidos recebidos no POST /clientes");
                 return BadRequest(ModelState); 
             }
+            _logger.LogInformation("Criando novo cliente: {Nome}", dto.Nome);
 
             var cliente = _mapper.Map<Cliente>(dto);
             await _repository.AddAsync(cliente);
+
+            _logger.LogInformation("Cliente criado com sucesso: {Id}", cliente.Id);
 
             var resultDto = _mapper.Map<ClienteDto>(cliente);
             return CreatedAtAction(nameof(GetById), new { id = cliente.Id }, resultDto);
