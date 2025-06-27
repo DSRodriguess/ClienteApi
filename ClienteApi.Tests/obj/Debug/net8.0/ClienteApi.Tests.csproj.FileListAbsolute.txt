@@ -125,3 +125,4 @@ C:\Users\David Rodrigues\source\ClienteApi\ClienteApi.Tests\obj\Debug\net8.0\ref
 C:\Users\David Rodrigues\source\ClienteApi\ClienteApi.Tests\obj\Debug\net8.0\ClienteApi.Tests.pdb
 C:\Users\David Rodrigues\source\ClienteApi\ClienteApi.Tests\obj\Debug\net8.0\ClienteApi.Tests.genruntimeconfig.cache
 C:\Users\David Rodrigues\source\ClienteApi\ClienteApi.Tests\obj\Debug\net8.0\ref\ClienteApi.Tests.dll
+C:\Users\David Rodrigues\source\ClienteApi\ClienteApi.Tests\obj\Debug\net8.0\ClienteApi.Tests.sourcelink.json
