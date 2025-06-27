@@ -1,68 +1,81 @@
 # API de Gerenciamento de Clientes
 
-API RESTful em ASP.NET Core 6 para gerenciar cadastro de clientes com endereços, utilizando os princípios do **Domain-Driven Design (DDD)** e **Entity Framework Core In-Memory Database**.
+API RESTful em ASP.NET Core para gerenciar cadastro de clientes com endereços, utilizando os princípios do **Domain-Driven Design (DDD)** e **Entity Framework Core In-Memory Database**.
 
-## Objetivo
+## Funcionalidades
 
-Criar uma Web API que permite o gerenciamento de clientes e seus respectivos endereços com os seguintes endpoints:
+- Cadastro, leitura, atualização e exclusão de clientes  
+- Cada cliente possui um único endereço  
+- Validação de campos obrigatórios e formatos (ex: email, CEP)  
+- Logs detalhados com `ILogger`  
+- AutoMapper para mapeamento entre DTOs e Entidades  
+- Banco de dados em memória (EF Core In-Memory Database)
 
-- `GET /clientes` – Listar todos os clientes  
-- `GET /clientes/{id}` – Obter cliente pelo ID  
-- `POST /clientes` – Criar novo cliente  
-- `PUT /clientes/{id}` – Atualizar cliente existente  
-- `DELETE /clientes/{id}` – Remover cliente  
-
-Cada cliente possui:
-- Nome (obrigatório)
-- Email (único e obrigatório)
-- Telefone (opcional)
-- Um único endereço com:
-  - Rua (obrigatória)
-  - Número (obrigatório)
-  - Cidade (obrigatória)
-  - Estado (obrigatório)
-  - CEP (obrigatório)
-
----
 
 ## Tecnologias Utilizadas
 
-- **ASP.NET Core 6**
+- **ASP.NET Core 6+**
 - **Entity Framework Core** (In-Memory Database)
 - **AutoMapper** para mapeamento entre DTOs e Entidades
 - **Domain-Driven Design (DDD)** – Separação por camadas: Domain, Application, Infrastructure, API
 - **Swagger UI** – Documentação interativa da API
 
+## Endpoints Disponíveis
+
+| Método | Rota             | Descrição                      |
+|--------|------------------|--------------------------------|
+| GET    | `/clientes`      | Lista todos os clientes        |
+| GET    | `/clientes/{id}` | Busca cliente por ID           |
+| POST   | `/clientes`      | Cria novo cliente              |
+| PUT    | `/clientes/{id}` | Atualiza cliente existente     |
+| DELETE | `/clientes/{id}` | Remove cliente                 |
+
 ## Estrutura do Projeto
 
+```bash
+ClienteApi/
+│
+├── Controllers/                  <- Camada API (controllers)
+├── Application/                  <- DTOs e serviços
+├── Domain/                       <- Entidades e interfaces (DDD)
+├── Infrastructure/               <- Contexto EF e repositórios
+├── Mappings/                     <- Configurações do AutoMapper
+├── Program.cs                    <- Configuração geral da API
+└── README.md                     <- Este arquivo
+```
 
 ## Como Executar o Projeto
 
-1. **Pré-requisitos:**  
-   Instale o [.NET 6 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
+**Pré-requisitos:**
 
-2. **Clone o repositório:**
+   Instale o [.NET SDK 6.0+](https://dotnet.microsoft.com/download/dotnet/6.0)
+
+**Passos**
+
+1. **Clone o repositório:**
 
    ```bash
-   git clone https://github.com/seu-usuario/cliente-api.git
+   git clone https://github.com/DSRodriguess/ClienteApi.git
    cd cliente-api
    ```
 
-3. **Restaure as dependências:**
+2. **Restaure as dependências:**
    ```bash
    dotnet restore
    ```
 
-4. **Execute a aplicação:**
+3. **Compile e execute a aplicação:**
    ```bash
    dotnet run
    ```
 
-5. **Acesse a documentação Swagger:**  
+4. **Acesse a documentação Swagger:**  
    [https://localhost:5001/swagger](https://localhost:5001/swagger)
 
 
-## Exemplo de Requisição 
+## Exemplo de Uso
+
+Use o Swagger ou ferramentas como **Postman** , **curl** ou **Insomnia** para testar os endpoints.
 
 **Endpoint:** `POST /clientes`
 
@@ -82,4 +95,18 @@ Cada cliente possui:
   }
 }
 ```
+
+## Melhores Práticas Adicionais
+- DDD com separação clara de camadas
+- Logging com ILogger
+- Validações com DataAnnotations
+- Respostas padronizadas (sucesso, erro, validação)
+- Documentação com Swagger
+
+## Autor
+
+Desenvolvido por [David Rodrigues](https://github.com/DSRodriguess)
+
+LinkedIn - https://www.linkedin.com/in/davidrodrigues97
+
 
