@@ -6874,19 +6874,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\David Rodrigues\\.nuget\\packages\\": {}
+    "/home/dgti/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\David Rodrigues\\source\\ClienteApi\\ClienteApi.Tests\\ClienteApi.Tests.csproj",
+      "projectUniqueName": "/home/dgti/Documentos/programs/ClienteApi/ClienteApi.Tests/ClienteApi.Tests.csproj",
       "projectName": "ClienteApi.Tests",
-      "projectPath": "C:\\Users\\David Rodrigues\\source\\ClienteApi\\ClienteApi.Tests\\ClienteApi.Tests.csproj",
-      "packagesPath": "C:\\Users\\David Rodrigues\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\David Rodrigues\\source\\ClienteApi\\ClienteApi.Tests\\obj\\",
+      "projectPath": "/home/dgti/Documentos/programs/ClienteApi/ClienteApi.Tests/ClienteApi.Tests.csproj",
+      "packagesPath": "/home/dgti/.nuget/packages/",
+      "outputPath": "/home/dgti/Documentos/programs/ClienteApi/ClienteApi.Tests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\David Rodrigues\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/dgti/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -6898,8 +6898,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\David Rodrigues\\source\\ClienteApi\\ClienteApi\\ClienteApi.csproj": {
-              "projectPath": "C:\\Users\\David Rodrigues\\source\\ClienteApi\\ClienteApi\\ClienteApi.csproj"
+            "/home/dgti/Documentos/programs/ClienteApi/ClienteApi/ClienteApi.csproj": {
+              "projectPath": "/home/dgti/Documentos/programs/ClienteApi/ClienteApi/ClienteApi.csproj"
             }
           }
         }
@@ -6958,7 +6958,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.411/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.411/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

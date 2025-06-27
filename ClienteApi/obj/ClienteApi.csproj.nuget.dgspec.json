@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\David Rodrigues\\source\\ClienteApi\\ClienteApi\\ClienteApi.csproj": {}
+    "/home/dgti/Documentos/programs/ClienteApi/ClienteApi/ClienteApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\David Rodrigues\\source\\ClienteApi\\ClienteApi\\ClienteApi.csproj": {
+    "/home/dgti/Documentos/programs/ClienteApi/ClienteApi/ClienteApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\David Rodrigues\\source\\ClienteApi\\ClienteApi\\ClienteApi.csproj",
+        "projectUniqueName": "/home/dgti/Documentos/programs/ClienteApi/ClienteApi/ClienteApi.csproj",
         "projectName": "ClienteApi",
-        "projectPath": "C:\\Users\\David Rodrigues\\source\\ClienteApi\\ClienteApi\\ClienteApi.csproj",
-        "packagesPath": "C:\\Users\\David Rodrigues\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\David Rodrigues\\source\\ClienteApi\\ClienteApi\\obj\\",
+        "projectPath": "/home/dgti/Documentos/programs/ClienteApi/ClienteApi/ClienteApi.csproj",
+        "packagesPath": "/home/dgti/.nuget/packages/",
+        "outputPath": "/home/dgti/Documentos/programs/ClienteApi/ClienteApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\David Rodrigues\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/dgti/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -87,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.411/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.411/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
