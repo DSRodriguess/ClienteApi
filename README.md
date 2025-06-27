@@ -10,6 +10,7 @@ API RESTful em ASP.NET Core para gerenciar cadastro de clientes com endereços, 
 - Logs detalhados com `ILogger`  
 - AutoMapper para mapeamento entre DTOs e Entidades  
 - Banco de dados em memória (EF Core In-Memory Database)
+- Testes unitários com **xUnit**, **Moq** e **EF Core In-Memory**
 
 
 ## Tecnologias Utilizadas
@@ -19,6 +20,9 @@ API RESTful em ASP.NET Core para gerenciar cadastro de clientes com endereços, 
 - **AutoMapper** para mapeamento entre DTOs e Entidades
 - **Domain-Driven Design (DDD)** – Separação por camadas: Domain, Application, Infrastructure, API
 - **Swagger UI** – Documentação interativa da API
+- **xUnit** – Testes unitários
+- **Moq** – Mock de dependências nos testes
+- **ILogger** – Logs estruturados
 
 ## Endpoints Disponíveis
 
@@ -32,16 +36,23 @@ API RESTful em ASP.NET Core para gerenciar cadastro de clientes com endereços, 
 
 ## Estrutura do Projeto
 
-```bash
+```
 ClienteApi/
+├── ClienteApi/           # Projeto principal (API)
+│   ├── Controllers                   <- Camada API (controllers)
+│   ├── Application/DTOs              <- DTOs e serviços
+│   ├── Domain/                       <- Entidades e interfaces (DDD)
+│   ├── Infrastructure/               <- Contexto EF e repositórios
+│   ├── Mappings/                     <- Configurações do AutoMapper
+│   ├── Program.cs                    <- Configuração geral da API
+│   └── ClienteApi.csproj
 │
-├── Controllers/                  <- Camada API (controllers)
-├── Application/                  <- DTOs e serviços
-├── Domain/                       <- Entidades e interfaces (DDD)
-├── Infrastructure/               <- Contexto EF e repositórios
-├── Mappings/                     <- Configurações do AutoMapper
-├── Program.cs                    <- Configuração geral da API
-└── README.md                     <- Este arquivo
+├── ClienteApi.Tests/     # Projeto de testes (xUnit)
+│   ├── UnitTests/
+│   │   ├── ClienteRepositoryTests.cs
+│   └── ClienteApi.Tests.csproj
+│
+└── README.md 
 ```
 
 ## Como Executar o Projeto
@@ -96,12 +107,29 @@ Use o Swagger ou ferramentas como **Postman** , **curl** ou **Insomnia** para te
 }
 ```
 
-## Melhores Práticas Adicionais
-- DDD com separação clara de camadas
-- Logging com ILogger
-- Validações com DataAnnotations
-- Respostas padronizadas (sucesso, erro, validação)
-- Documentação com Swagger
+## Testes Unitários
+
+Este projeto utiliza **xUnit** para testes unitários.
+
+### Executar os testes
+
+1. Navegue até a pasta do projeto de testes:
+
+```bash
+cd ClienteApi.Tests
+```
+
+2. Restaure as dependências:
+
+```bash
+dotnet restore
+```
+
+3. Execute os testes:
+
+```bash
+dotnet test
+```
 
 ## Autor
 
