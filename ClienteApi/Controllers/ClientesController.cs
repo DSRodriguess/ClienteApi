@@ -50,8 +50,16 @@ namespace ClienteApi.Controllers
             if (!ModelState.IsValid)
             {
                 _logger.LogWarning("Dados inválidos recebidos no POST /clientes");
-                return BadRequest(ModelState); 
+                return BadRequest(ModelState);
             }
+
+            var clienteComEmail = await _repository.GetAllAsync();
+            if (clienteComEmail.Any(c => c.Email == dto.Email))
+            {
+                ModelState.AddModelError("Email", "Já existe um cliente com esse email.");
+                return BadRequest(ModelState);
+            }
+
             _logger.LogInformation("Criando novo cliente: {Nome}", dto.Nome);
 
             var cliente = _mapper.Map<Cliente>(dto);
@@ -62,7 +70,7 @@ namespace ClienteApi.Controllers
             var resultDto = _mapper.Map<ClienteDto>(cliente);
             return CreatedAtAction(nameof(GetById), new { id = cliente.Id }, resultDto);
         }
-
+        
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(Guid id, [FromBody] UpdateClienteDto dto)
         {
